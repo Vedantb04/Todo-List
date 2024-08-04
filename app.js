@@ -83,7 +83,7 @@ const updateTaskList = () => {
             </div>
             <div class="icons">
              <img src="24.png" id="ed" onClick="editTask(${index})"/>
-             <img src="image/crox1.png"  id="del" onClick="deleteTask(${index})"/>
+             <img src="crox1.png"  id="del" onClick="deleteTask(${index})"/>
             
             </div>
         </div>
