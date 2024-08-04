@@ -1,0 +1,202 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --background: #121212; /* Almost Black */
+    --secondaryBackground: #1E1E1E; /* Dark Gray */
+    --text: #E0E0E0; /* Light Gray */
+    --border: #BB86FC; /* Light Purple */
+    --progress: #00ffaa/* Teal */
+    
+    
+} 
+
+
+body{
+    /* background: linear-gradient( red ,yellow, rgb(235, 62, 91)); */
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+    margin: 120px auto 0 auto;
+    max-width: 500px;
+}
+
+.stats-container {
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid var(--border);
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    width: 100%;
+}
+.details{
+    width: 100%;
+    font-size: 18px;
+}
+
+#progressBar{
+    width: 100%;
+    height: 10px;
+    background-color: var(--secondaryBackground);
+    border-radius: 5px ;
+    margin-top: 20px;
+
+}
+
+#progress{
+    width: 0%;
+    height: 10px;
+    background-color: var(--progress);
+    border-radius: 10px;
+    transition: all 0.3s cubic-bezier(0.07, 0.58, 0.43, 1.11);
+    ;
+}
+#numbers{
+    width: 100px;
+    height: 100px;
+    background-color: var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+form{
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    gap: 7px;
+}
+input{
+    flex: 1;
+    padding: 10px;
+    background-color: var(--secondaryBackground);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    color: var(--text);
+}
+button{
+    padding: 16px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--border);
+    color: var(--text);
+    font-size: 30px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+}
+
+#newTask{
+    padding: 3px  ;
+}
+
+
+#task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    width: 100%;
+    list-style: none;
+}
+.taskItem {
+    display: flex;
+    background-color: var(--secondaryBackground);
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.completed p {
+    text-decoration: line-through;
+    color: var(--progress);
+}
+.taskItem img{
+    width: 30px;
+    height: 30px;
+    margin: 7px 10px;
+    cursor: pointer;
+}
+#ed{
+    width: 34px;
+    height: 34px;
+}
+@media screen and (max-width: 520px) {
+    .details{
+        width: 100%;
+        font-size: 15px;
+    }
+    .stats-container {
+        padding: 17px;
+        gap: 50px;
+        width: 100%;
+    }
+    .container{
+    
+        margin: 90px auto 0 auto;
+        max-width: 298px;
+    }
+    #numbers{
+        width: 70px;
+        height: 70px;
+        font-size: 20px;    
+    }
+    #progressBar{
+        width: 189%;
+        height: 9px;
+        margin-top: 30px;
+    
+    }
+    
+    #progress{
+        height: 9px;
+    }
+    input{
+        padding: 9px;
+    }
+    button{
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 25px;
+    }
+    form {
+        gap: 7px;
+    }
+    .taskItem img{
+        width: 22px;
+        height: 22px;
+        margin:  10px;
+        gap: 3px;
+    }
+    .taskItem {
+        padding: 5px;
+    }
+    #del{
+        width: 28px;
+        height: 28px;
+    }
+}
